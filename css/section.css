@@ -14,3 +14,7 @@
 .main__header {
   font-family: system-ui;
 }
+
+.section__body {
+  padding: 20px;
+}
