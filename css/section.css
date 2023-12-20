@@ -14,6 +14,10 @@
 .main__header {
   font-family: "Rubik Doodle Shadow";
   color: #222;
+  border-bottom: 3px teal solid;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 5px cyan;
 }
 
 .section__body {
