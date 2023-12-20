@@ -59,9 +59,13 @@ const taskManager = (() => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    const newTaskInput = document.querySelector(".js-newTask");
+    const newTaskContent = newTaskInput.value.trim();
+
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
+
+      newTaskInput.value = "";
     }
   };
 
