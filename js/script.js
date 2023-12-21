@@ -8,13 +8,15 @@ const taskManager = (() => {
     tasksContainer.innerHTML = state.tasks
       .map(
         (task, index) => `
-          <li class="list__item${task.done ? " list__item--done" : ""}">
-            <button class="js-done task__button task__button--toggleDone">${
-              task.done ? "✅" : ""
-            }</button>
-            ${task.content}
-            <button class="js-remove task__button task__button--remove">🗑️</button>
-          </li>
+        <li class="list__item
+           ${task.done ? " list__item--done" : ""}">
+        <button class="js-done task__button task__button--toggleDone">
+           ${task.done ? "✅" : ""}</button>
+        <span class="js-task-content 
+           ${task.done ? "task-content--done" : ""}">
+           ${task.content}</span>
+        <button class="js-remove task__button task__button--remove">🗑️</button>
+      </li>
         `
       )
       .join("");
