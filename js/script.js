@@ -57,6 +57,10 @@ const taskManager = (() => {
     });
 
     render();
+
+    const newTaskInput = document.querySelector(".js-newTask");
+    newTaskInput.value = "";
+    newTaskInput.focus();
   };
 
   const onFormSubmit = (event) => {
