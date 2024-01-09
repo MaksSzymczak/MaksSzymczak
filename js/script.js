@@ -25,12 +25,21 @@ const taskManager = (() => {
   };
 
   const removeTask = (index) => {
-    state.tasks.splice(index, 1);
+    const updatedTasks = [
+      ...state.tasks.slice(0, index),
+      ...state.tasks.slice(index + 1),
+    ];
+    state.tasks = updatedTasks;
     render();
   };
 
   const toggleTaskDone = (index) => {
-    state.tasks[index].done = !state.tasks[index].done;
+    const updatedTasks = [...state.tasks];
+    updatedTasks[index] = {
+      ...updatedTasks[index],
+      done: !updatedTasks[index].done,
+    };
+    state.tasks = updatedTasks;
     render();
   };
 
@@ -51,10 +60,12 @@ const taskManager = (() => {
   };
 
   const addNewTask = (newTaskContent) => {
-    state.tasks.push({
+    const newTask = {
       content: newTaskContent,
       done: false,
-    });
+    };
+    const updatedTasks = [...state.tasks, newTask];
+    state.tasks = updatedTasks;
 
     render();
 
@@ -70,7 +81,6 @@ const taskManager = (() => {
 
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
-
       newTaskInput.value = "";
     }
   };
