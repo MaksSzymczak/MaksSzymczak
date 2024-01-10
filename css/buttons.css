@@ -1,0 +1,37 @@
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.buttons__button {
+    color: #008080;
+    background-color: transparent;
+    border: none;
+    margin: 0 0 0 20px;
+    transition: color 0.5s;
+}
+
+@media (max-width: 767px) {
+    .buttons__button {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
+
+.buttons__button:hover {
+    color: #02b9b9;
+}
+
+.buttons__button:active {
+    color: #04dada;
+
+}
+
+.buttons__button:disabled {
+    color: #cccccc;
+}
+
+.buttons__button:disabled {
+    cursor: not-allowed;
+}
