@@ -2,11 +2,13 @@ html {
     box-sizing: border-box;
 }
 
-*, ::after, ::before {
+*,
+::before,
+::after {
     box-sizing: inherit;
 }
 
-body {
-    font-family: "Lato", sans-serif;
-    background: #eee;
+.body {
+    font-family: Lato, sans-serif;
+    background-color: #eee;
 }

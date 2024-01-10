@@ -1,49 +1,60 @@
-.task__button--toggleDone {
-    background-color: rgb(22, 230, 3);
-    border: 1px solid #222;
-    width: 30px;
-    height: 30px;
-}
-
-.task__button--toggleDone:hover {
-    background-color: rgb(21, 255, 0);
-    cursor: pointer;
-}
-
-
-.task__button--remove {
-    background-color: hsl(348, 83%, 47%);
-    border: 1px solid #222;
-    width: 30px;
-    height: 30px;
-}
-
-.task__button--remove:hover {
-    background-color: hsl(348, 83%, 57%);
-    cursor: pointer;
-
-}
-
-.task__button {
-    margin: 10px 5px;
-}
-
 .tasks {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.task-content--done {
-    text-decoration: line-through;
-}
-
-
-.list__item {
+.tasks__item {
+    border-bottom: 1px solid #ddd;
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+}
+
+.tasks__content {
+    color: #000000;
+}
+
+.tasks__content--done {
+    text-decoration: line-through;
+}
+
+.tasks__button {
+    border: none;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transition: 1s;
+}
+
+.tasks__button--toggleDone {
+    background-color: #248f24;
+}
+
+.tasks__button--toggleDone:hover {
+    background-color: #29a329;
+}
+
+.tasks__button--toggleDone:active {
+    background-color: #2eb82e;
+}
+
+.tasks__button--remove {
+    background-color: #e61942;
+}
+
+.tasks__button--remove:hover {
+    background-color: #eb4768;
+}
+
+.tasks__button--remove:active {
+    background-color: #f0758e;
+    transition: 1s;
+}
+
+.tasks__hidden {
+    display: none;
 }
