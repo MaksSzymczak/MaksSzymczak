@@ -9,7 +9,8 @@
     background-color: transparent;
     border: none;
     margin: 0 0 0 20px;
-    transition: color 0.5s;
+    transition: color 1s;
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {

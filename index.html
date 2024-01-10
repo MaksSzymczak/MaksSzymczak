@@ -9,6 +9,7 @@
     <link href="css/form.css" rel="stylesheet" />
     <link href="css/task.css" rel="stylesheet" />
     <link href="css/section.css" rel="stylesheet" />
+    <link href="css/buttons.css" rel="stylesheet" />
     <script defer src="js/script.js"></script>
     <link rel="icon" href="images/ListIicon.png" />
     <link
@@ -25,18 +26,18 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="body">
     <main class="container">
       <header>
-        <h1 class="main__header">Lista zadań</h1>
+        <h1 class="header">Lista zadań</h1>
       </header>
-
       <section class="section">
         <h2 class="section__header">Dodaj nowe zadanie</h2>
         <div class="section__body">
-          <form class="js-form form">
+          <form class="form js-form">
             <input
-              class="js-newTask form__input"
+              class="form__input js-newTask"
+              type="text"
               placeholder="Co jest do zrobienia?"
             />
             <button class="form__button">Dodaj zadanie</button>
@@ -44,9 +45,12 @@
         </div>
       </section>
       <section class="section">
-        <h2 class="section__header">Lista zadań</h2>
+        <header class="section__header">
+          <h2 class="section__title">Lista zadań</h2>
+          <div class="buttons js-buttons"></div>
+        </header>
         <div class="section__body">
-          <ul class="js-tasks tasks"></ul>
+          <ul class="tasks js-tasks"></ul>
         </div>
       </section>
     </main>
