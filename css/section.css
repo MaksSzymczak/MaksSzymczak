@@ -1,23 +1,29 @@
 .section {
   margin: 10px 0;
-  background: whitesmoke;
-  box-shadow: 0 0 5px #c7c5c5;
+  background: white;
+  box-shadow: 0 0 5px #ddd;
 }
 
 .section__header {
-  font-size: 20px;
   padding: 20px;
-  margin: 0;
   border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.main__header {
-  font-family: "Rubik Doodle Shadow";
-  color: #222;
-  border-bottom: 3px teal solid;
-  padding: 10px;
-  text-align: center;
-  text-shadow: 1px 1px 5px cyan;
+@media (max-width: 767px) {
+  .section__header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.section__title {
+  font-size: 20px;
+  margin: 0;
 }
 
 .section__body {
